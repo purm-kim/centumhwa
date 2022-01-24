@@ -512,7 +512,7 @@ em, i, b, address {
 .sub_style {
   padding: 80rem 0;
   width: 100%;
-  min-height: 350rem;
+  min-height: 380rem;
 }
 
 .sub_style.bg01 {
@@ -560,7 +560,7 @@ em, i, b, address {
   top: 0;
   left: 0;
   width: 100%;
-  height: 350rem;
+  height: 380rem;
   background-color: rgba(16, 34, 105, 0.3);
 }
 
@@ -584,7 +584,7 @@ em, i, b, address {
 .sub_top .sub_top_txt em {
   margin-top: 20rem;
   display: inline-block;
-  font-size: 20rem;
+  font-size: 23rem;
 }
 
 .doc_intro {
