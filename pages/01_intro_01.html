@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="/style.css">
   <title>센텀화외과의원</title>
 </head>
@@ -19,7 +20,7 @@
       <ul class="depth1">
         <li class="depth1_01">
           <a href="">병원소개</a>
-          <ul class="depth2 depth2_01">
+          <ul class="depth2">
             <li><a href="">의료진 소개</a></li>
             <li><a href="">진료 및 입원안내</a></li>
             <li><a href="">오시는 길</a></li>
@@ -28,7 +29,7 @@
         </li>
         <li class="depth1_02">
           <a href="">화상 클리닉</a>
-          <ul class="depth2 depth2_02">
+          <ul class="depth2">
             <li><a href="">급성화상</a></li>
             <li><a href="">화상치료</a></li>
             <li><a href="">소아화상</a></li>
@@ -36,7 +37,7 @@
         </li>
         <li class="depth1_03">
           <a href="">피부 클리닉</a>
-          <ul class="depth2 depth2_03">
+          <ul class="depth2">
             <li><a href="">색소레이저</a></li>
             <li><a href="">슈링크</a></li>
             <li><a href="">피부재활 마사지</a></li>
@@ -46,20 +47,20 @@
         </li>
         <li class="depth1_04">
           <a href="">메디컬 클리닉</a>
-          <ul class="depth2 depth2_04">
+          <ul class="depth2">
             <li><a href="">지방종/피지낭종</a></li>
             <li><a href="">열상봉합</a></li>
           </ul>
         </li>
         <li class="depth1_05">
           <a href="">건강클리닉</a>
-          <ul class="depth2 depth2_05">
+          <ul class="depth2">
             <li><a href="">힐링수액</a></li>
           </ul>
         </li>
         <li class="depth1_06">
           <a href="">커뮤니티</a>
-          <ul class="depth2 depth2_06">
+          <ul class="depth2">
             <li><a href="">공지사항</a></li>
             <li><a href="">비급여안내</a></li>
           </ul>
@@ -83,39 +84,53 @@
   <section class="sub_style">
     <div class="w-1200 doc_intro">
       <div class="txt_con">
-        <h2><span class="strong">조동민 </span>대표원장</h2>
-        <b>약력</b>
-        <p>
-          외과전문의
-          <br>인제대학교 의과대학 졸업
-          <br>삼성창원병원 인턴수료
-          <br>삼성서울병원 레지던트
-          <br>가톨릭대학교 성빈센트병원 전임의
-          <br>화상전문 부산하나병원 과장
-          <br>창원 화사랑외과의원 부원장
-        </p>
-        <b>학회활동</b>
-        <p>
-          대한외과학회 정회원
-          <br>대한 화상학회 정회원
-          <br>대한 외과초음파학회 정회원
-          <br>대한 레이저피부모발학회 평생회원
-          <br>한국 유방암학회 정회원
-          <br>대한 갑상선내분비외과학회 정회원
-        </p>
+        <p class="name"><span class="strong">조동민 </span>대표원장</p>
+        <ul class="career">
+          <li class="strong">약력</li>
+          <li>외과전문의</li>
+          <li>인제대학교 의과대학 졸업</li>
+          <li>삼성창원병원 인턴수료</li>
+          <li>삼성서울병원 레지던트</li>
+          <li>가톨릭대학교 성빈센트병원 전임의</li>
+          <li>화상전문 부산하나병원 과장</li>
+          <li>창원 화사랑외과의원 부원장</li>
+        </ul>
+        <ul class="career">
+          <li class="strong">학회활동</li>
+          <li>대한외과학회 정회원</li>
+          <li>대한 화상학회 정회원</li>
+          <li>대한 외과초음파학회 정회원</li>
+          <li>대한 레이저피부모발학회 평생회원</li>
+          <li>한국 유방암학회 정회원</li>
+          <li>화상전문 부산하나병원 과장</li>
+          <li>대한 갑상선내분비외과학회 정회원</li>
+        </ul>
+        
       </div>
       <div class="img_wrap">
         <img src="/img/sub/doc_intro.png" alt="">
       </div>
     </div>
-    <div class="w-1200"></div>
-    
   </section>
-
   <!-- 의료진 소개 끝 -->
-
-
-
+  <!-- 의사 한마디 시작 -->
+  <div class="full_bg doc_intro_01">
+    <div class="w-1200">
+      <div class="sub_txt">
+        <h2 class="h2">
+          화상으로 인한 고통과
+          <br>흉터에 대한 걱정을 해소해드립니다.
+        </h2>
+        <span>
+          진피층의 탄력을 증강하고 싶은 분들 토닝 및 프락셀로
+          <br>잡티제거와 피부톤을 개선하여 더욱 아름다워지고 싶은 분들
+          <br>화상, 외상에 의해 죽은 진피조직의 재생 전문, 흉터치료까지
+          <br>도와드리고 있습니다
+        </span>
+      </div>
+    </div>
+  </div>
+  <!-- 의사 한마디 끝 -->
   <!-- 푸터 시작 -->
   <footer id="footer">
     <div class="fnb_section">
@@ -140,4 +155,10 @@
     </address>
   </footer>
   <!-- 푸터 끝 -->
+  <script>
+    
+    $(".gnb li").hover(function() {
+      $(this).children("ul").stop().slideToggle(300)
+    })
+  </script>
 </body>

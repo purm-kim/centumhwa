@@ -440,15 +440,28 @@ em, i, b, address{
 }
 
 .doc_intro{
+  margin-bottom: 100rem;
   display: flex;
   justify-content: space-between;
   .txt_con{
+    flex:1;
     font-size: 18rem;
-    .h2{
-      font-weight: 500;
+    .name{
+      font-size: 34rem;
+      font-weight: 300;
+    }
+    .career{
+      margin-top:30rem;
+      li{
+        padding: 5rem 0;
+      }
+      .strong{
+        font-size: 24rem;
+      }
     }
   }
   .img_wrap{
+    flex:1;
     width: 600rem;
     height: 600rem;
     img{
@@ -458,5 +471,34 @@ em, i, b, address{
     }
   }
 }
+.doc_intro_01{
+  width: 100%;
+  height: 440rem;
+  background: url(/img/sub/doc_intro_01.jpg) no-repeat center center #a8a4a4;
+  .w-1200{
+    position: relative;
+    height: 100%;
+    .sub_txt{
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
 
+      width: 530rem;
+      height: 220rem;
+      color:#fff;
+      .h2{
+        font-size: 36rem;
+        font-weight: 700;
+      }
+      span{
+        display: inline-block;
+        margin-top: 20rem;
+        font-size: 18rem;
+        line-height: 30rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+  
 
+}
