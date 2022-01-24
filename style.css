@@ -109,6 +109,7 @@ em, i, b, address {
 }
 
 #header .gnb .depth1 li {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -116,33 +117,12 @@ em, i, b, address {
   line-height: 50rem;
 }
 
-#header .gnb .depth1 .depth1_01:hover .depth2_01 {
-  display: block;
-}
-
-#header .gnb .depth1 .depth1_02:hover .depth2_02 {
-  display: block;
-}
-
-#header .gnb .depth1 .depth1_03:hover .depth2_03 {
-  display: block;
-}
-
-#header .gnb .depth1 .depth1_04:hover .depth2_04 {
-  display: block;
-}
-
-#header .gnb .depth1 .depth1_05:hover .depth2_05 {
-  display: block;
-}
-
-#header .gnb .depth1 .depth1_06:hover .depth2_06 {
-  display: block;
-}
-
 #header .gnb .depth1 .depth2 {
+  position: absolute;
+  z-index: 100;
   display: none;
   padding: 10rem;
+  width: 100%;
   background-color: #fff;
 }
 
@@ -532,7 +512,7 @@ em, i, b, address {
 .sub_style {
   padding: 80rem 0;
   width: 100%;
-  height: 350rem;
+  min-height: 350rem;
 }
 
 .sub_style.bg01 {
@@ -577,8 +557,8 @@ em, i, b, address {
           transform: translate(-50%, -50%);
   z-index: 100;
   text-align: center;
-  width: 670rem;
-  height: 150rem;
+  max-width: 670rem;
+  height: 120rem;
   color: #fff;
 }
 
@@ -590,4 +570,33 @@ em, i, b, address {
   margin-top: 20rem;
   display: inline-block;
   font-size: 20rem;
+}
+
+.doc_intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.doc_intro .txt_con {
+  font-size: 18rem;
+}
+
+.doc_intro .txt_con .h2 {
+  font-weight: 500;
+}
+
+.doc_intro .img_wrap {
+  width: 600rem;
+  height: 600rem;
+}
+
+.doc_intro .img_wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }

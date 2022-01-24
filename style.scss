@@ -88,43 +88,17 @@ em, i, b, address{
       display: flex;
       align-items: flex-start;
       li{
+        position: relative;
         flex:1;
         text-align:center;
         line-height: 50rem;
       }
-      .depth1_01:hover{
-        .depth2_01{
-          display: block;
-        }
-      }
-      .depth1_02:hover{
-        .depth2_02{
-          display: block;
-        }
-      }
-      .depth1_03:hover{
-        .depth2_03{
-          display: block;
-        }
-      }
-      .depth1_04:hover{
-        .depth2_04{
-          display: block;
-        }
-      }
-      .depth1_05:hover{
-        .depth2_05{
-          display: block;
-        }
-      }
-      .depth1_06:hover{
-        .depth2_06{
-          display: block;
-        }
-      }
       .depth2{
+        position: absolute;
+        z-index: 100;
         display: none;
         padding: 10rem;
+        width: 100%;
         background-color: #fff;
         li{
           padding:10rem;
@@ -140,6 +114,7 @@ em, i, b, address{
           }
         }
       }
+      
     }
   }
 }
@@ -428,7 +403,7 @@ em, i, b, address{
 .sub_style{
   padding: 80rem 0;
   width: 100%;
-  height: 350rem;
+  min-height: 350rem;
   @for $i from 1 to 6 {
     &.bg0#{$i} {
       position: relative;
@@ -450,8 +425,8 @@ em, i, b, address{
     transform: translate(-50%, -50%);
     z-index: 100;
     text-align: center;
-    width: 670rem;
-    height: 150rem;
+    max-width: 670rem;
+    height: 120rem;
     color: #fff;
     .h1{
       font-size: 54rem;
@@ -464,5 +439,24 @@ em, i, b, address{
   }
 }
 
+.doc_intro{
+  display: flex;
+  justify-content: space-between;
+  .txt_con{
+    font-size: 18rem;
+    .h2{
+      font-weight: 500;
+    }
+  }
+  .img_wrap{
+    width: 600rem;
+    height: 600rem;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
 
 

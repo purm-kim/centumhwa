@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="/style.css">
   <title>센텀화외과의원</title>
 </head>
@@ -19,7 +20,7 @@
       <ul class="depth1">
         <li class="depth1_01">
           <a href="">병원소개</a>
-          <ul class="depth2 depth2_01">
+          <ul class="depth2">
             <li><a href="">의료진 소개</a></li>
             <li><a href="">진료 및 입원안내</a></li>
             <li><a href="">오시는 길</a></li>
@@ -28,7 +29,7 @@
         </li>
         <li class="depth1_02">
           <a href="">화상 클리닉</a>
-          <ul class="depth2 depth2_02">
+          <ul class="depth2">
             <li><a href="">급성화상</a></li>
             <li><a href="">화상치료</a></li>
             <li><a href="">소아화상</a></li>
@@ -36,7 +37,7 @@
         </li>
         <li class="depth1_03">
           <a href="">피부 클리닉</a>
-          <ul class="depth2 depth2_03">
+          <ul class="depth2">
             <li><a href="">색소레이저</a></li>
             <li><a href="">슈링크</a></li>
             <li><a href="">피부재활 마사지</a></li>
@@ -46,20 +47,20 @@
         </li>
         <li class="depth1_04">
           <a href="">메디컬 클리닉</a>
-          <ul class="depth2 depth2_04">
+          <ul class="depth2">
             <li><a href="">지방종/피지낭종</a></li>
             <li><a href="">열상봉합</a></li>
           </ul>
         </li>
         <li class="depth1_05">
           <a href="">건강클리닉</a>
-          <ul class="depth2 depth2_05">
+          <ul class="depth2">
             <li><a href="">힐링수액</a></li>
           </ul>
         </li>
         <li class="depth1_06">
           <a href="">커뮤니티</a>
-          <ul class="depth2 depth2_06">
+          <ul class="depth2">
             <li><a href="">공지사항</a></li>
             <li><a href="">비급여안내</a></li>
           </ul>
@@ -230,7 +231,10 @@
   <!-- 푸터 끝 -->
 
   <script>
-
+    
+    $(".gnb li").hover(function() {
+      $(this).children("ul").stop().slideToggle(300)
+    })
   </script>
 </body>
 </html>
