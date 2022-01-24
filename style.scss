@@ -404,7 +404,7 @@ em, i, b, address{
   padding: 80rem 0;
   width: 100%;
   min-height: 350rem;
-  @for $i from 1 to 6 {
+  @for $i from 1 to 9 {
     &.bg0#{$i} {
       position: relative;
       background: url(/img/sub/sub_top/sub_top_0#{$i}.jpg) center center / cover;

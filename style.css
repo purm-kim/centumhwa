@@ -540,6 +540,21 @@ em, i, b, address {
   background: url(/img/sub/sub_top/sub_top_05.jpg) center center/cover;
 }
 
+.sub_style.bg06 {
+  position: relative;
+  background: url(/img/sub/sub_top/sub_top_06.jpg) center center/cover;
+}
+
+.sub_style.bg07 {
+  position: relative;
+  background: url(/img/sub/sub_top/sub_top_07.jpg) center center/cover;
+}
+
+.sub_style.bg08 {
+  position: relative;
+  background: url(/img/sub/sub_top/sub_top_08.jpg) center center/cover;
+}
+
 .sub_top {
   position: absolute;
   top: 0;
