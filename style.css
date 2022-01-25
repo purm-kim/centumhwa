@@ -119,7 +119,7 @@ em, i, b, address {
 
 #header .gnb .depth1 .depth2 {
   position: absolute;
-  z-index: 100;
+  z-index: 200;
   display: none;
   padding: 10rem;
   width: 100%;
