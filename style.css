@@ -67,6 +67,12 @@ em, i, b, address {
   width: 1200rem;
 }
 
+.w-1200 .section_title {
+  margin-bottom: 50rem;
+  font-size: 36rem;
+  color: #d8762c;
+}
+
 #header {
   width: 100%;
   height: 150rem;
@@ -670,4 +676,29 @@ em, i, b, address {
   font-size: 18rem;
   line-height: 30rem;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.announce .img_wrap {
+  width: 75rem;
+  height: 70rem;
+}
+
+.announce .img_wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.justify .img_wrap {
+  width: 300rem;
+  height: 200rem;
+}
+
+.justify .img_wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 2%;
 }

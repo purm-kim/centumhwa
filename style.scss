@@ -56,6 +56,11 @@ em, i, b, address{
 .w-1200{
   margin: 0 auto;
   width: 1200rem;
+  .section_title{
+    margin-bottom: 50rem;
+    font-size: 36rem;
+    color: #d8762c;
+  }
 }
 
 
@@ -504,4 +509,28 @@ em, i, b, address{
   }
   
 
+}
+.announce{
+  .img_wrap{
+    width: 75rem;
+    height: 70rem;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.justify{
+  .img_wrap{
+    width: 300rem;
+    height: 200rem;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 2%;
+    }
+  }
 }
