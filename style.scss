@@ -523,14 +523,49 @@ em, i, b, address{
 }
 
 .justify{
+  .justify_con{
+    display: flex;
+    column-gap: 50rem;
+    align-items: center;
+    width: 1200rem;
+    .img_wrap{
+      display: inline-block;
+      width: 300rem;
+      height: 200rem;
+      img{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 2%;
+      }
+    }
+    .txt_con{
+      flex-grow: 1;
+      width: 800rem;
+      .txt{
+        font-size: 18rem;
+      }
+    }
+  }
+}
+
+.symptom{
+  .square_th{
+    padding: 15rem;
+    vertical-align: middle;
+    width: 180rem;
+  }
+}
+
+.cause{
   .img_wrap{
-    width: 300rem;
-    height: 200rem;
+    margin:0 auto 50rem;
+    width: 700rem;
+    height: 400rem;
     img{
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 2%;
+      border-radius: 1%;
+      border:1rem solid #ddd;
     }
   }
 }
