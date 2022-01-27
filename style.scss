@@ -626,6 +626,9 @@ table{
     color: #606060;
     line-height: 1.4em;
     border-bottom: 1rem solid #eaeaea;
+    &:last-child{
+      border-bottom:none;
+    }
   }
   .orange_num{
     display: flex;
@@ -733,6 +736,9 @@ table{
       color: #606060;
       line-height: 1.4em;
       border-bottom: 1rem solid #eaeaea;
+      &:last-child{
+        border-bottom:none;
+      }
     }
     .orange_num{
       display: flex;
@@ -754,6 +760,21 @@ table{
       height: 100%;
       object-fit: cover;
     }
+  }
+}
+.caution{
+  padding:50rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20rem;
+  li{
+    padding: 30rem 0;
+    text-align: center;
+    width: 100%;
+    font-size: 20rem;
+    color:#fff;
+    border-radius: 40rem;
+    background: linear-gradient( to right , #864065 , #8f4a5d);
   }
 }
 

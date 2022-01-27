@@ -824,6 +824,10 @@ table {
   border-bottom: 1rem solid #eaeaea;
 }
 
+.cause .txt1:last-child {
+  border-bottom: none;
+}
+
 .cause .orange_num {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -974,6 +978,10 @@ table {
   border-bottom: 1rem solid #eaeaea;
 }
 
+.precause .marble .txt1:last-child {
+  border-bottom: none;
+}
+
 .precause .marble .orange_num {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1002,6 +1010,29 @@ table {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.caution {
+  padding: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20rem;
+}
+
+.caution li {
+  padding: 30rem 0;
+  text-align: center;
+  width: 100%;
+  font-size: 20rem;
+  color: #fff;
+  border-radius: 40rem;
+  background: -webkit-gradient(linear, left top, right top, from(#864065), to(#8f4a5d));
+  background: linear-gradient(to right, #864065, #8f4a5d);
 }
 
 @media screen and (min-width: 300rem) and (max-width: 768rem) {
