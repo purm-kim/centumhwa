@@ -667,16 +667,17 @@ table {
 }
 
 .full_img_bg .w-1200 .sub_txt {
+  margin-left: 20rem;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 60%;
-  height: 220rem;
   color: #fff;
 }
 
 .full_img_bg .w-1200 .sub_txt .h2 {
+  line-height: 1.4em;
   font-size: 36rem;
   font-weight: 500;
 }
@@ -838,6 +839,107 @@ table {
   color: #fff;
   border-radius: 50%;
   background-color: #dc831f;
+}
+
+.scar_treat .circle_wrap_title {
+  text-align: center;
+  font-size: 25rem;
+  font-weight: 700;
+}
+
+.scar_treat .circle_wrap {
+  padding: 30rem 0 80rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.scar_treat .circle_wrap .circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150rem;
+  height: 150rem;
+  font-size: 18rem;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 50%;
+  background: url(/img/common/round-glass.png) no-repeat center center;
+  background-color: #13326d;
+}
+
+.scar_treat .circle_wrap .circle:nth-child(2n-1) {
+  background-color: #1f6a89;
+}
+
+.scar_treat .circle_wrap .circle .img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.scar_treat .solution_title {
+  margin: 100rem 0 60rem;
+  text-align: center;
+  font-size: 25rem;
+  font-weight: 700;
+}
+
+.scar_treat .solution .solution_item {
+  margin-bottom: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.scar_treat .solution .solution_item:last-child {
+  margin: 0;
+}
+
+.scar_treat .solution .solution_item .img_wrap {
+  width: 25%;
+  height: 200rem;
+}
+
+.scar_treat .solution .solution_item .img_wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.scar_treat .solution .solution_item .txt_area {
+  padding: 30rem;
+  width: calc(100% - 25%);
+  background-color: #f2f2f2;
+}
+
+.scar_treat .solution .solution_item .txt_area p {
+  font-size: 22rem;
+  font-weight: 600;
+  color: #a7793c;
+}
+
+.scar_treat .solution .solution_item .txt_area span {
+  margin-top: 20rem;
+  display: inline-block;
+  line-height: 1.6em;
+  font-size: 17rem;
 }
 
 @media screen and (min-width: 300rem) and (max-width: 768rem) {
