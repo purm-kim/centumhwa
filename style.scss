@@ -485,10 +485,15 @@ table{
     }
   }
 }
-.doc_intro_01{
+.doc_intro_{
+  background: url(/img/sub/doc_intro_01.jpg) no-repeat center center #a8a4a4;
+}
+.scar_treat_{
+  background: url(/img/sub/burnclinic02_03.jpg) no-repeat center center #062032;
+}
+.full_img_bg{
   width: 100%;
   height: 440rem;
-  background: url(/img/sub/doc_intro_01.jpg) no-repeat center center #a8a4a4;
   .w-1200{
     position: relative;
     height: 100%;
@@ -496,13 +501,12 @@ table{
       position: absolute;
       top:50%;
       transform: translateY(-50%);
-
-      width: 530rem;
+      width: 60%;
       height: 220rem;
       color:#fff;
       .h2{
         font-size: 36rem;
-        font-weight: 700;
+        font-weight: 500;
       }
       span{
         display: inline-block;
@@ -633,8 +637,9 @@ table{
     background-color: #dc831f;
   }
 }
-
 .scar_treat{}
+
+
 
 @media screen and (min-width:300rem) and (max-width:768rem){
   .symptom{
