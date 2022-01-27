@@ -737,6 +737,7 @@ table {
 }
 
 .justify .justify_con .txt_con .txt {
+  line-height: 1.6em;
   font-size: 18rem;
 }
 
@@ -838,7 +839,7 @@ table {
   font-size: 16rem;
   color: #fff;
   border-radius: 50%;
-  background-color: #dc831f;
+  background-color: #ee8418;
 }
 
 .scar_treat .circle_wrap_title {
@@ -940,6 +941,67 @@ table {
   display: inline-block;
   line-height: 1.6em;
   font-size: 17rem;
+}
+
+.precause {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.precause .marble .txt1 {
+  padding: 10rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20rem;
+          column-gap: 20rem;
+  width: 590rem;
+  font-size: 18rem;
+  font-weight: 400;
+  color: #606060;
+  line-height: 1.4em;
+  border-bottom: 1rem solid #eaeaea;
+}
+
+.precause .marble .orange_num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 36rem;
+  height: 36rem;
+  font-size: 16rem;
+  color: #fff;
+  border-radius: 20%;
+  background-color: #ee8418;
+}
+
+.precause .img_wrap {
+  width: 554rem;
+  height: 370rem;
+}
+
+.precause .img_wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 300rem) and (max-width: 768rem) {

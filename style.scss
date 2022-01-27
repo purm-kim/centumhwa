@@ -555,6 +555,7 @@ table{
       flex-grow: 1;
       width: 800rem;
       .txt{
+        line-height: 1.6em;
         font-size: 18rem;
       }
     }
@@ -635,7 +636,7 @@ table{
     font-size: 16rem;
     color:#fff;
     border-radius: 50%;
-    background-color: #dc831f;
+    background-color: #ee8418;
   }
 }
 .scar_treat{
@@ -711,6 +712,47 @@ table{
           font-size: 17rem;
         }
       }
+    }
+  }
+}
+
+.precause{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .marble{
+    .txt1{
+      padding: 10rem 0;
+      display: flex;
+      align-items: center;
+      column-gap: 20rem;
+      width: 590rem;
+      font-size: 18rem;
+      font-weight: 400;
+      color: #606060;
+      line-height: 1.4em;
+      border-bottom: 1rem solid #eaeaea;
+    }
+    .orange_num{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36rem;
+      height: 36rem;
+      font-size: 16rem;
+      color:#fff;
+      border-radius: 20%;
+      background-color: #ee8418;
+    }
+  }
+  .img_wrap{
+    width: 554rem;
+    height: 370rem;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
