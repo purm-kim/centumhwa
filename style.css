@@ -656,6 +656,10 @@ table {
   background: url(/img/sub/burnclinic02_03.jpg) no-repeat center center #062032;
 }
 
+.medical_clinic_01 {
+  background: url(/img/sub/medicalclinic01_03.jpg) no-repeat center center #a8a09e;
+}
+
 .full_img_bg {
   width: 100%;
   height: 440rem;
@@ -897,14 +901,14 @@ table {
      object-fit: cover;
 }
 
-.scar_treat .solution_title {
+.solution_title {
   margin: 100rem 0 60rem;
   text-align: center;
   font-size: 25rem;
   font-weight: 700;
 }
 
-.scar_treat .solution .solution_item {
+.solution .solution_item {
   margin-bottom: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -912,35 +916,35 @@ table {
   width: 100%;
 }
 
-.scar_treat .solution .solution_item:last-child {
+.solution .solution_item:last-child {
   margin: 0;
 }
 
-.scar_treat .solution .solution_item .img_wrap {
+.solution .solution_item .img_wrap {
   width: 25%;
   height: 200rem;
 }
 
-.scar_treat .solution .solution_item .img_wrap img {
+.solution .solution_item .img_wrap img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.scar_treat .solution .solution_item .txt_area {
+.solution .solution_item .txt_area {
   padding: 30rem;
   width: calc(100% - 25%);
   background-color: #f2f2f2;
 }
 
-.scar_treat .solution .solution_item .txt_area p {
+.solution .solution_item .txt_area p {
   font-size: 22rem;
   font-weight: 600;
   color: #a7793c;
 }
 
-.scar_treat .solution .solution_item .txt_area span {
+.solution .solution_item .txt_area span {
   margin-top: 20rem;
   display: inline-block;
   line-height: 1.6em;
@@ -1033,6 +1037,108 @@ table {
   border-radius: 40rem;
   background: -webkit-gradient(linear, left top, right top, from(#864065), to(#8f4a5d));
   background: linear-gradient(to right, #864065, #8f4a5d);
+}
+
+.medic_system .w-1200 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 50rem;
+          column-gap: 50rem;
+}
+
+.medic_system .img_wrap {
+  width: 300rem;
+  height: 300rem;
+}
+
+.medic_system .img_wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.medic_system .txt_box .h4 {
+  font-size: 30rem;
+  font-weight: 600;
+  color: #3596d3;
+}
+
+.medic_system .txt_box hr {
+  margin: 20rem 0;
+  text-align: left;
+  width: 40rem;
+  height: 1rem;
+  border: none;
+  background-color: #dedede;
+}
+
+.medic_system .txt_box .counsel li {
+  padding: 10rem 0;
+  font-size: 16rem;
+  color: #808080;
+}
+
+.medic_system .txt_box .counsel li .disc {
+  margin-right: 6rem;
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: #454545;
+}
+
+.medic_system .txt_box .medic_step {
+  margin-top: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 60rem;
+          column-gap: 60rem;
+  width: 100%;
+}
+
+.medic_system .txt_box .medic_step li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 18rem;
+  color: #fff;
+  width: 120rem;
+  height: 120rem;
+  border-radius: 50%;
+  background-color: #9ebddc;
+}
+
+.medic_system .txt_box .medic_step li:nth-child(1)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  z-index: -100;
+  top: 50%;
+  left: 1%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 360rem;
+  height: 50rem;
+  background: url(/img/sub/medicalclinic01_05.png) no-repeat right center/cover;
+}
+
+.medic_system .txt_box .medic_step li:nth-child(2) {
+  background-color: #345899;
+}
+
+.medic_system .txt_box .medic_step li:nth-child(3) {
+  background-color: #2b497b;
 }
 
 @media screen and (min-width: 300rem) and (max-width: 768rem) {

@@ -491,6 +491,10 @@ table{
 .scar_treat_{
   background: url(/img/sub/burnclinic02_03.jpg) no-repeat center center #062032;
 }
+.medical_clinic_01{
+  background: url(/img/sub/medicalclinic01_03.jpg) no-repeat center center #a8a09e;
+}
+
 .full_img_bg{
   width: 100%;
   height: 440rem;
@@ -676,44 +680,45 @@ table{
       }
     }
   }
-  .solution_title{
-    margin:100rem 0 60rem;
-    text-align: center;
-    font-size: 25rem;
-    font-weight: 700;
-  }
-  .solution{
-    .solution_item{
-      margin-bottom: 10rem;
-      display: flex;
-      width: 100%;
-      &:last-child{
-        margin:0;
+}
+
+.solution_title{
+  margin:100rem 0 60rem;
+  text-align: center;
+  font-size: 25rem;
+  font-weight: 700;
+}
+.solution{
+  .solution_item{
+    margin-bottom: 10rem;
+    display: flex;
+    width: 100%;
+    &:last-child{
+      margin:0;
+    }
+    .img_wrap{
+      width: 25%;
+      height: 200rem;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
-      .img_wrap{
-        width: 25%;
-        height: 200rem;
-        img{
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+    }
+    .txt_area{
+      padding: 30rem;
+      width: calc(100% - 25%);
+      background-color: #f2f2f2;
+      p{
+        font-size: 22rem;
+        font-weight: 600;
+        color: #a7793c;
       }
-      .txt_area{
-        padding: 30rem;
-        width: calc(100% - 25%);
-        background-color: #f2f2f2;
-        p{
-          font-size: 22rem;
-          font-weight: 600;
-          color: #a7793c;
-        }
-        span{
-          margin-top: 20rem;
-          display: inline-block;
-          line-height: 1.6em;
-          font-size: 17rem;
-        }
+      span{
+        margin-top: 20rem;
+        display: inline-block;
+        line-height: 1.6em;
+        font-size: 17rem;
       }
     }
   }
@@ -775,6 +780,90 @@ table{
     color:#fff;
     border-radius: 40rem;
     background: linear-gradient( to right , #864065 , #8f4a5d);
+  }
+}
+.medic_system{
+  .w-1200{
+    display: flex;
+    column-gap: 50rem;
+  }
+  .img_wrap{
+    width: 300rem;
+    height: 300rem;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .txt_box{
+    .h4{
+      font-size: 30rem;
+      font-weight: 600;
+      color: #3596d3;
+    }
+    hr{
+      margin: 20rem 0 ;
+      text-align: left;
+      width: 40rem;
+      height: 1rem;
+      border:none;
+      background-color: #dedede;
+    }
+    .counsel{
+      li{
+        padding: 10rem 0;
+        font-size: 16rem;
+        color: #808080;
+        .disc{
+          margin-right: 6rem;
+          display: inline-block;
+          width: 8rem;
+          height: 8rem;
+          border-radius: 50%;
+          background-color: #454545;
+        }
+      }
+    }
+    .medic_step{
+      margin-top: 25rem;
+      display: flex;
+      column-gap: 60rem;
+      width: 100%;
+      li{
+        position:relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 18rem;
+        color: #fff;
+        width: 120rem;
+        height: 120rem;
+        border-radius: 50%;
+        background-color: #9ebddc;
+        &:nth-child(1){
+          &::after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            z-index: -100;
+            top:50%;
+            left: 1%;
+            transform: translateY(-50%);
+            width: 360rem;
+            height: 50rem;
+            background: url(/img/sub/medicalclinic01_05.png) no-repeat right center / cover;
+          }
+        }
+        &:nth-child(2){
+          background-color: #345899;
+        }
+        &:nth-child(3){
+          background-color: #2b497b;
+        }
+      }
+    }
   }
 }
 
