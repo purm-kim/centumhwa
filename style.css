@@ -586,7 +586,6 @@ table {
   z-index: 100;
   text-align: center;
   max-width: 670rem;
-  height: 120rem;
   color: #fff;
 }
 
@@ -832,6 +831,12 @@ table {
   color: #fff;
   border-radius: 50%;
   background-color: #dc831f;
+}
+
+@media screen and (min-width: 300rem) and (max-width: 768rem) {
+  .symptom .square_td {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 769rem) and (max-width: 3000rem) {
