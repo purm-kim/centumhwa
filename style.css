@@ -1145,6 +1145,60 @@ table {
   background-color: #2b497b;
 }
 
+.bib_marble_wrap {
+  margin-bottom: 120rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30rem;
+          column-gap: 30rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bib_marble_wrap .big_marble {
+  padding: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 220rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 10%;
+  background: url(/img/common/round-glass.png) no-repeat center center #c97c3d;
+}
+
+.bib_marble_wrap .big_marble:nth-child(2n+1) {
+  background-color: #cabd93;
+}
+
+.bib_marble_wrap .big_marble p {
+  font-size: 30rem;
+  font-weight: bold;
+}
+
+.bib_marble_wrap .big_marble hr {
+  text-align: center;
+  margin: 30rem 0;
+  width: 185rem;
+  height: 1rem;
+  border: none;
+  background-color: #fff;
+}
+
+.bib_marble_wrap .big_marble span {
+  font-size: 18rem;
+  font-weight: normal;
+}
+
 @media screen and (min-width: 300rem) and (max-width: 768rem) {
   .symptom .square_td {
     width: 50%;

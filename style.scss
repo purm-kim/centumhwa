@@ -869,6 +869,43 @@ table{
     }
   }
 }
+.bib_marble_wrap{
+  margin-bottom: 120rem;
+  display: flex;
+  column-gap: 30rem;
+  justify-content: center;
+  .big_marble{
+    padding: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // width: 220rem;
+    height: 220rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 10%;
+    background: url(/img/common/round-glass.png) no-repeat center center #c97c3d;
+    &:nth-child(2n+1){
+      background-color: #cabd93;
+    }
+    p{
+      font-size: 30rem;
+      font-weight: bold;
+    }
+    hr{
+      text-align: center;
+      margin: 30rem 0 ;
+      width: 185rem;
+      height: 1rem;
+      border: none;
+      background-color: #fff;
+    }
+    span{
+      font-size: 18rem;
+      font-weight: normal;
+    }
+  }
+}
 
 
 
