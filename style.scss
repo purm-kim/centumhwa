@@ -570,18 +570,67 @@ table{
     text-align: center;
   }
   .flex_4{
-    margin-top: 40rem;
+    margin-top: 60rem;
     display: flex;
+    flex-direction: row;
     column-gap: 10rem;
     .flex_4_item{
       flex:1;
-      background-color: #13326d;
       .img_wrap{
         height: 235rem;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
       .txt_con{
+        text-align: center;
         padding: 30rem;
         height: 170rem;
+        background-color: #fff;
+        .h3{
+          margin-bottom: 15rem;
+          font-size: 25rem;
+          font-weight: 800;
+          color:#ea5e1e;
+        }
+        span{
+          font-size: 18rem;
+          font-weight: 400;
+          color: #454545;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+}
+.room_intro{
+  height: 870rem;
+  background: url(/img/sub/intro02_05.png) no-repeat center center / cover;
+}
+.hwa_{
+  height: 800rem;
+  background-color: #747789;
+  .h2{
+    text-align: center;
+    font-size: 33rem;
+    font-weight: 400;
+    color:#fff;
+    letter-spacing: 7rem;
+  }
+  .img_set{
+    margin:50rem auto;
+    display: flex;
+    width: 1250rem;
+    .img_wrap{
+      margin-right: -60rem;
+      flex-grow: 1;
+      // width: 30%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     }
   }

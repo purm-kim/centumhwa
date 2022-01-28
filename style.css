@@ -755,10 +755,14 @@ table {
 }
 
 .subj_intro .flex_4 {
-  margin-top: 40rem;
+  margin-top: 60rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-column-gap: 10rem;
           column-gap: 10rem;
 }
@@ -767,16 +771,78 @@ table {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #13326d;
 }
 
 .subj_intro .flex_4 .flex_4_item .img_wrap {
   height: 235rem;
 }
 
+.subj_intro .flex_4 .flex_4_item .img_wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .subj_intro .flex_4 .flex_4_item .txt_con {
+  text-align: center;
   padding: 30rem;
   height: 170rem;
+  background-color: #fff;
+}
+
+.subj_intro .flex_4 .flex_4_item .txt_con .h3 {
+  margin-bottom: 15rem;
+  font-size: 25rem;
+  font-weight: 800;
+  color: #ea5e1e;
+}
+
+.subj_intro .flex_4 .flex_4_item .txt_con span {
+  font-size: 18rem;
+  font-weight: 400;
+  color: #454545;
+  line-height: 1.5em;
+}
+
+.room_intro {
+  height: 870rem;
+  background: url(/img/sub/intro02_05.png) no-repeat center center/cover;
+}
+
+.hwa_ {
+  height: 800rem;
+  background-color: #747789;
+}
+
+.hwa_ .h2 {
+  text-align: center;
+  font-size: 33rem;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 7rem;
+}
+
+.hwa_ .img_set {
+  margin: 50rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1250rem;
+}
+
+.hwa_ .img_set .img_wrap {
+  margin-right: -60rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.hwa_ .img_set .img_wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .justify .justify_con {
