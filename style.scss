@@ -7,10 +7,34 @@
   font-style: normal;
 }
 
-//디폴트
-*{
-	box-sizing: border-box;
+// BreakPoints
+@mixin mq($point) {
+  @if $point == pc {
+    @media (min-width: 2000px) {
+      @content;
+    }
+  }
+  @if $point == tablet {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+  @if $point == mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
 }
+
+.hidden-xs {
+  @include mq(mobile) {
+    display: none;
+  }
+}
+
+
+//디폴트
+*{box-sizing: border-box}
 html,
 body {
 	font-size: 6.25%;
@@ -60,10 +84,16 @@ table{
 .w-1200{
   margin: 0 auto;
   width: 1200rem;
+  @include mq(mobile){
+    width: 100vw;
+  }
   .section_title{
     margin-bottom: 50rem;
     font-size: 36rem;
     color: #d8762c;
+    @include mq(mobile){
+      text-align: center;
+    }
   }
 }
 
@@ -136,6 +166,9 @@ table{
   right:1%;
   z-index: 9999;
   width: 120rem;
+  @include mq(mobile){
+    display: none;
+  }
   .quick_menu{
     li{
       margin-bottom: 10rem;
@@ -192,9 +225,9 @@ table{
   ul{
     margin: 01 auto;
     display: flex;
-    // @include mq(mobile){
-    //   flex-wrap: wrap;
-    // }
+    @include mq(mobile){
+      flex-wrap: wrap;
+    }
   }
   a{
     position: relative;
@@ -449,7 +482,6 @@ table{
     }
   }
 }
-
 .doc_intro{
   margin-bottom: 100rem;
   display: flex;
@@ -494,7 +526,6 @@ table{
 .no_scar{
   background: url(/img/sub/medicalclinic02_02.jpg) no-repeat center center #46423c;
 }
-
 .full_img_bg{
   width: 100%;
   height: 440rem;
@@ -661,11 +692,17 @@ table{
     font-size: 18rem;
     color:707070;
   }
-  .slide_1000{
+  .room_slide{
     margin: 50rem auto;
-    width: 1100rem;
-    height: 800rem;
+    width: 1000rem;
+    height: 600rem;
     background-color: #bdbdbd;
+    .swiper-button-next{
+      color:#fff;
+    }
+    .swiper-button-prev{
+      color:#fff;
+    }
   }
   .txt_con{
     p{
@@ -730,6 +767,11 @@ table{
     column-gap: 50rem;
     align-items: center;
     width: 1200rem;
+    @include mq(mobile){
+      width: 100vw;
+      flex-direction: column;
+      row-gap: 30rem;
+    }
     .img_wrap{
       display: inline-block;
       width: 300rem;
@@ -745,6 +787,9 @@ table{
     .txt_con{
       flex-grow: 1;
       width: 800rem;
+      @include mq(mobile){
+        width: 80%;
+      }
       .txt{
         line-height: 1.6em;
         font-size: 18rem;
@@ -1190,6 +1235,10 @@ table{
 .intro_img_slide{
   width: 1000rem;
   height: 100%;
+  @include mq(mobile){
+    width: 95%;
+    height: 100%;
+  }
   .swiper-button-prev{
     color: #fff;
   }
@@ -1201,29 +1250,22 @@ table{
   padding-top: 30rem;
   width: 1000rem;
   height: 150rem;
+  @include mq(mobile){
+    width: 95%;
+  }
   .swiper-slide{
     height: 100%;
+    opacity: 0.6;
     img{
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
-}
-
-
-@media screen and (min-width:300rem) and (max-width:768rem){
-  .symptom{
-    .square_td{
-      width: 50%;
-    }
+  .swiper-slide-thumb-active{
+    opacity: 1;
+    border: 4rem solid #0091ff;
   }
 }
 
-@media screen and (min-width:769rem) and (max-width:3000rem){
-  .symptom{
-    .square_td{
-      width: 980rem;
-    }
-  }
-}
+
