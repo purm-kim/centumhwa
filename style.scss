@@ -49,8 +49,6 @@ table{
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-
 .strong{
   font-weight: 700;
 }
@@ -69,7 +67,7 @@ table{
   }
 }
 
-
+//main
 #header{
   width: 100%;
   height: 150rem;
@@ -131,7 +129,6 @@ table{
     }
   }
 }
-
 .side_quick_menu{
   position: fixed;
   top:50%;
@@ -187,12 +184,10 @@ table{
     
   }
 }
-
-.img_slide{
+.main_img_slide{
   width: 100%;
   height: calc(100vh - 150rem);
 }
-
 .banner_menu{
   ul{
     margin: 01 auto;
@@ -224,7 +219,6 @@ table{
     }
   }
 }
-
 .fixed_banner{
   position: relative;
   height: 660rem;
@@ -249,7 +243,6 @@ table{
     }
   }
 }
-
 .notice_location{
   height: 100%;
   background-color: #efefef;
@@ -348,7 +341,6 @@ table{
     }
   }
 }
-
 #footer{
   width: 100%;
   .fnb_section{
@@ -412,7 +404,7 @@ table{
   }
 }
 
-
+//sub
 .sub_style{
   padding: 80rem 0;
   width: 100%;
@@ -424,7 +416,6 @@ table{
     }
   }
 }
-
 .sub_top{
   position: absolute;
   top:0;
@@ -1088,6 +1079,17 @@ table{
       font-weight: normal;
     }
   }
+}
+.map_full{
+  width: 100%;
+  height: 600rem;
+  background-color: antiquewhite;
+}
+.way_to_go{
+  margin-top: 80rem;
+  width: 100%;
+  height: 800rem;
+  background-color: aquamarine;
 }
 
 

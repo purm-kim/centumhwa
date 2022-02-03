@@ -228,7 +228,7 @@ table {
           align-items: center;
 }
 
-.img_slide {
+.main_img_slide {
   width: 100%;
   height: calc(100vh - 150rem);
 }
@@ -1437,6 +1437,19 @@ table {
 .big_marble_wrap .big_marble span {
   font-size: 18rem;
   font-weight: normal;
+}
+
+.map_full {
+  width: 100%;
+  height: 600rem;
+  background-color: antiquewhite;
+}
+
+.way_to_go {
+  margin-top: 80rem;
+  width: 100%;
+  height: 800rem;
+  background-color: aquamarine;
 }
 
 @media screen and (min-width: 300rem) and (max-width: 768rem) {
