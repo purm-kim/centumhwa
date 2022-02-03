@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="/style.css">
   <title>센텀화외과의원</title>
 </head>
@@ -108,7 +109,18 @@
   <!-- 사이드 퀵메뉴 끝 -->
   <!-- img슬라이드 시작 -->
   <section class="main_img_slide">
-    <img src="/img/main/main_banner.jpg" alt="">
+    <div class="swiper main_img_slide">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/img/main/main_banner.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="/img/main/main_banner.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </section>
   <!-- img슬라이드 끝 -->
   <!-- banner_menu 시작 -->
@@ -230,11 +242,24 @@
   </footer>
   <!-- 푸터 끝 -->
 
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <script>
     
     $(".gnb li").hover(function() {
       $(this).children("ul").stop().slideToggle(300)
     })
+
+    var swiper = new Swiper(".main_img_slide", {
+      spaceBetween:30,
+      centeredSlide:true,
+      autoplay:{
+        delay:3000,
+        disableOnInteraction:false,
+      }
+    });
+
   </script>
 </body>
 </html>

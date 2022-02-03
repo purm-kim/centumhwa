@@ -254,7 +254,12 @@ table {
 
 .main_img_slide {
   width: 100%;
-  height: calc(100vh - 150rem);
+}
+
+@media (max-width: 768px) {
+  .main_img_slide {
+    width: 100vw;
+  }
 }
 
 .banner_menu ul {

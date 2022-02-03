@@ -119,7 +119,6 @@ table{
       }
     }
   }
-  
   .gnb{
     margin: 0 auto;
     max-width: 1300rem;
@@ -155,7 +154,6 @@ table{
           }
         }
       }
-      
     }
   }
 }
@@ -219,7 +217,10 @@ table{
 }
 .main_img_slide{
   width: 100%;
-  height: calc(100vh - 150rem);
+
+  @include mq(mobile){
+    width: 100vw;
+  }
 }
 .banner_menu{
   ul{
