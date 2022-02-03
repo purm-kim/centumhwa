@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="/style.css">
   <title>병원 둘러보기 : 센텀화외과의원</title>
 </head>
@@ -121,8 +123,34 @@
   <!-- 이미지 슬라이드 시작 -->
   <section class="sub_style">
     <div class="w-1200">
-      <div class="0104_img_slide">
-
+      <div class="swiper intro_img_slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide01.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide02.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide03.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide04.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide05.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide06.png" alt="">
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div thumbsSlider="" class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -153,11 +181,36 @@
   </footer>
   <!-- 푸터 끝 -->
 
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <script>
-    
+    //gnb 슬라이드 다운
     $(".gnb li").hover(function() {
       $(this).children("ul").stop().slideToggle(300)
     })
+
+    //이미지 슬라이드
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".0104_img_slide", {
+        spaceBetween: 10,
+        autoplay:{
+          delay:2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
   </script>
 </body>
 </html>
