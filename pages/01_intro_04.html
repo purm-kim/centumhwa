@@ -5,8 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="/style.css">
   <title>병원 둘러보기 : 센텀화외과의원</title>
 </head>
@@ -143,13 +142,42 @@
           <div class="swiper-slide">
             <img src="/img/sub/intro04_slide06.png" alt="">
           </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide07.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide08.png" alt="">
+          </div>
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
-      <div thumbsSlider="" class="swiper">
+      <div thumbsSlider="" class="swiper thumb_slider">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"></div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide01.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide02.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide03.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide04.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide05.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide06.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide07.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="/img/sub/intro04_slide08.png" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -191,16 +219,16 @@
     })
 
     //이미지 슬라이드
-    var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper(".thumb_slider", {
         spaceBetween: 10,
-        slidesPerView: 4,
+        slidesPerView: 6,
         freeMode: true,
         watchSlidesProgress: true,
       });
-      var swiper2 = new Swiper(".0104_img_slide", {
+      var swiper2 = new Swiper(".intro_img_slide", {
         spaceBetween: 10,
         autoplay:{
-          delay:2500,
+          delay:3000,
           disableOnInteraction: false,
         },
         navigation: {
