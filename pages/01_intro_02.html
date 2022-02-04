@@ -10,6 +10,72 @@
   <title>진료 및 입원안내 : 센텀화외과의원</title>
 </head>
 <body>
+  <!-- 로고 및 gnb 시작 -->
+  <header id="header">
+    <div class="logo_title">
+      <a href="" class="icon_call">
+        <img src="/img/common/icon_call.png" alt="">
+      </a>
+      <a href="index.html" class="img_wrap">
+        <img src="/img/common/logo_color.png" alt="">
+      </a>
+      <a href="" class="mainmenu">
+        <img src="/img/common/icon_mainmenu.png" alt="">
+      </a>
+    </div>
+    <div class="gnb">
+      <ul class="depth1">
+        <li class="depth1_01">
+          <a href="">병원소개</a>
+          <ul class="depth2">
+            <li><a href="">의료진 소개</a></li>
+            <li><a href="">진료 및 입원안내</a></li>
+            <li><a href="">오시는 길</a></li>
+            <li><a href="">병원 둘러보기</a></li>
+          </ul>
+        </li>
+        <li class="depth1_02">
+          <a href="">화상 클리닉</a>
+          <ul class="depth2">
+            <li><a href="">급성화상</a></li>
+            <li><a href="">화상치료</a></li>
+            <li><a href="">소아화상</a></li>
+          </ul>
+        </li>
+        <li class="depth1_03">
+          <a href="">피부 클리닉</a>
+          <ul class="depth2">
+            <li><a href="">색소레이저</a></li>
+            <li><a href="">슈링크</a></li>
+            <li><a href="">피부재활 마사지</a></li>
+            <li><a href="">메디컬 케어</a></li>
+            <li><a href="">보톡스</a></li>
+          </ul>
+        </li>
+        <li class="depth1_04">
+          <a href="">메디컬 클리닉</a>
+          <ul class="depth2">
+            <li><a href="">지방종/피지낭종</a></li>
+            <li><a href="">열상봉합</a></li>
+          </ul>
+        </li>
+        <li class="depth1_05">
+          <a href="">건강클리닉</a>
+          <ul class="depth2">
+            <li><a href="">힐링수액</a></li>
+          </ul>
+        </li>
+        <li class="depth1_06">
+          <a href="">커뮤니티</a>
+          <ul class="depth2">
+            <li><a href="">공지사항</a></li>
+            <li><a href="">비급여안내</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- 로고 및 gnb 끝 -->
   <!-- 서브탑 시작 -->
   <section class="sub_style bg01">
     <div class="sub_top">
@@ -166,7 +232,7 @@
   <!-- 화외과 특징 시작 -->
   <section>
   <section class="sub_style hwa_">
-    <div class="w-1200">
+    <!-- <div class="w-1200"> -->
       <h2 class="h2">CENTUM HWA SURGERY HOSPITAL</h2>
       <div class="img_set">
         <div class="img_wrap">
@@ -181,14 +247,14 @@
             <span class="thin">Epidermal sac</span>
             <p class="medium">지방종 | 표피낭 | 열상봉합</p>
           </div>
-          <img src="/img/sub/intro02_banner02.png" alt="">
+          <img src="/img/sub/intro02_banner03.png" alt="">
         </div>
         <div class="img_wrap">
           <div class="txt_con">
             <span class="thin">색소레이저 | 슈링크 | 피부재활 | 보톡스</span>
             <p class="medium">흉터치료</p>
           </div>
-          <img src="/img/sub/intro02_banner03.png" alt="">
+          <img src="/img/sub/intro02_banner02.png" alt="">
         </div>
         <div class="img_wrap">
           <div class="txt_con">
@@ -199,10 +265,39 @@
         </div>
 
       </div>
-    </div>
+    <!-- </div> -->
   </section>
   <!-- 화외과 특징 끝 -->
-
+  <!-- 푸터 시작 -->
+  <footer id="footer">
+    <div class="fnb_section">
+      <ul class="fnb">
+        <li>
+          <a href="">개인정보취급방침</a>
+        </li>
+        <li>
+          <a href="">이용약관</a>
+        </li>
+        <li>
+          <a href="">비급여 안내</a>
+        </li>
+      </ul>
+    </div>
+    <address class="address">
+      <div class="img_wrap">
+        <img src="/img/common/logo_bw.png" alt="">
+      </div>
+      <ul class="footer_con">
+        <li>상호명 : 센텀화외과의원</li>
+        <li>주소 : 부산광역시 해운대구 해운대로 365, 벡스코메디컬 7층</li>
+        <li>대표자 : 조동민</li>
+        <li>사업자등록번호 : 738-05-01185</li>
+        <li>대표전화 : 051-710-8253</li>
+      </ul>
+      <span>Copyright ⓒ 2020 센텀화외과의원. All Rights Reserved.</span>
+    </address>
+  </footer>
+  <!-- 푸터 끝 -->
 
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -218,6 +313,9 @@
       spaceBetween: 10,
       freeMode:true,
       watchSlidesProgress:true,
+      breakpoint:{
+
+      },
       autoplay:{
         delay:3000,
         disableOnInteraction: false,

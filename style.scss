@@ -85,14 +85,14 @@ table{
   margin: 0 auto;
   width: 1200rem;
   @include mq(mobile){
-    width: 100vw;
+    width: 100%;
   }
   .section_title{
     margin-bottom: 50rem;
     font-size: 36rem;
     color: #d8762c;
     @include mq(mobile){
-      text-align: center;
+      padding-left: 30rem;
     }
   }
 }
@@ -101,32 +101,82 @@ table{
 #header{
   width: 100%;
   height: 150rem;
-  border-bottom: 1rem solid #bcbcbc;
+  @include mq(mobile){
+    height: 80rem;
+  }
   .logo_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100rem;
-    border-bottom: 1rem solid #bcbcbc;
-    text-align: center;
+    @include mq(mobile){
+      // justify-content: space-around;
+      align-items: center;
+      height: 80rem;
+      border-bottom: 1rem solid #dfdfdf;
+    }
     .img_wrap{
-      margin-top: 10rem;
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 500rem;
       height: 80rem;
+      @include mq(mobile){
+        width: 60%;
+        height: 60rem;
+      }
       img{
         width: 100%;
         height: 100%;
         object-fit: contain;
       }
     }
+    .mainmenu{
+      display: none;
+      width: 60rem;
+      height: 60rem;
+      @include mq(mobile){
+        display: flex;
+        justify-content: center;
+        align-items:center;
+      }
+      img{
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+      }
+    }
+    .icon_call{
+      // display: none;
+      width: 60rem;
+      height: 60rem;
+      @include mq(moblie){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img{
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+      }
+    }
   }
   .gnb{
     margin: 0 auto;
-    max-width: 1300rem;
+    width: 100%;
     height: 50rem;
     font-size: 18rem;
+    border-top: 1rem solid #bcbcbc;
+    border-bottom: 1rem solid #bcbcbc;
+    @include mq(mobile){
+      display: none;
+    }
     .depth1{
       display: flex;
       align-items: flex-start;
+      width: 1300rem;
       li{
         position: relative;
         flex:1;
@@ -388,6 +438,9 @@ table{
     height: 50rem;
     border-top:1rem solid #bcbcbc;
     border-bottom: 1rem solid #bcbcbc;
+    @include mq(mobile){
+      display: none;
+    }
     .fnb{
       display: flex;
       justify-content: center;
@@ -400,16 +453,23 @@ table{
         &:last-child{
           border: none;
         }
+        a:hover{
+          color:#e75921
+        }
       }
     }
   }
-  
   .address{
     margin:0 auto;
     padding: 30rem 0;
     text-align: center;
-    width: 1200rem;
+    // width: 1200rem;
+    width: 100%;
     height: 300rem;
+    @include mq(mobile){
+      height: 100%;
+      background-color: #efefef;
+    }
     .img_wrap{
       margin:0 auto;
       width: 280rem;
@@ -428,6 +488,12 @@ table{
       align-items: center;
       row-gap: 20rem;
       font-size: 16rem;
+      @include mq(mobile){
+        margin-top: 30rem;
+        row-gap: 10rem;
+        font-size: 15rem;
+        word-break: keep-all;
+      }
       li{
         padding: 0 30rem;
         border-right: 1rem solid #bcbcbc;
@@ -455,6 +521,11 @@ table{
       background: url(/img/sub/sub_top/sub_top_0#{$i}.jpg) center center / cover;
     }
   }
+  @include mq(mobile){
+    padding:80rem 25rem;
+    width: 100%;
+    min-height:250rem;
+  }
 }
 .sub_top{
   position: absolute;
@@ -463,6 +534,9 @@ table{
   width: 100%;
   height: 380rem;
   background-color: rgba(16,34,105,0.3);
+  @include mq(mobile){
+    height: 250rem;
+  }
   .sub_top_txt{
     position: absolute;
     top:50%;
@@ -470,25 +544,40 @@ table{
     transform: translate(-50%, -50%);
     z-index: 100;
     text-align: center;
+    min-width: 500rem;
     max-width: 670rem;
     // height: 120rem;
     color: #fff;
     .h1{
       font-size: 54rem;
+      @include mq(mobile){
+        font-size: 40rem;
+        font-weight: 900;
+      }
     }
     em{
       margin-top: 20rem;
       display: inline-block;
       font-size: 23rem;
+      @include mq(mobile){
+        font-size: 16rem;
+      }
     }
   }
 }
 .doc_intro{
-  margin-bottom: 100rem;
+  margin-bottom:100rem;
   display: flex;
+  // flex-direction:row;
   justify-content: space-between;
+  @include mq(mobile){
+    flex-direction: column;
+    row-gap: 50rem;
+  }
   .txt_con{
-    flex:1;
+    order:2;
+    align-items: flex-start;
+    flex:0.5;
     font-size: 18rem;
     .name{
       font-size: 34rem;
@@ -505,9 +594,13 @@ table{
     }
   }
   .img_wrap{
+    order:1;
     flex:1;
     width: 600rem;
     height: 600rem;
+    @include mq(mobile){
+      width: 100%;
+    }
     img{
       width: 100%;
       height: 100%;
@@ -528,46 +621,59 @@ table{
   background: url(/img/sub/medicalclinic02_02.jpg) no-repeat center center #46423c;
 }
 .full_img_bg{
+  position: relative;
   width: 100%;
   height: 440rem;
-  .w-1200{
-    position: relative;
-    height: 100%;
-    .sub_txt{
-      margin-left:20rem;
-      position: absolute;
-      top:50%;
-      transform: translateY(-50%);
-      width: 60%;
-      color:#fff;
-      .h2{
+  @include mq(mobile){
+    height: 700rem;
+  }
+  .sub_txt{
+    margin-left:20rem;
+    position: absolute;
+    left:20%;
+    top:50%;
+    transform: translateY(-50%);
+    width: 60%;
+    color:#fff;
+    @include mq(mobile){
+      left:0;
+    }
+    .h2{
+      line-height: 1.4em;
+      font-size: 36rem;
+      font-weight: 500;
+    }
+    span{
+      display: inline-block;
+      margin-top: 20rem;
+      font-size: 18rem;
+      line-height: 30rem;
+      color: rgba(255, 255, 255, 0.6);
+      @include mq(mobile){
+        font-size: 16rem;
         line-height: 1.4em;
-        font-size: 36rem;
-        font-weight: 500;
-      }
-      span{
-        display: inline-block;
-        margin-top: 20rem;
-        font-size: 18rem;
-        line-height: 30rem;
-        color: rgba(255, 255, 255, 0.6);
       }
     }
   }
-  
-
 }
 .announce{
   background-color: #7c7c7c;
   .flex_3{
     display: flex;
     column-gap: 10rem;
+    @include mq(mobile){
+      flex-direction: column;
+      row-gap: 20rem;
+    }
     .flex_3_item{
       position: relative;
       flex:1;
       padding: 30rem;
       height: 300rem;
       background-color: #fff;
+      @include mq(mobile){
+        text-align: center;
+      }
       .img_wrap{
         margin: 0 auto;
         width: 75rem;
@@ -603,6 +709,10 @@ table{
     display: flex;
     flex-direction: row;
     column-gap: 10rem;
+    @include mq(mobile){
+      flex-direction: column;
+      row-gap: 20rem;
+    }
     .flex_4_item{
       flex:1;
       .img_wrap{
@@ -638,8 +748,14 @@ table{
   color:#fff;
   height: 870rem;
   background: url(/img/sub/intro02_05.png) no-repeat center center / cover;
+  @include mq(mobile){
+    height: 100%;
+  }
   .w-1200{
     padding:80rem 0;
+    @include mq(mobile){
+      padding:0;
+    }
   }
   .thin{
     font-size: 15rem;
@@ -660,12 +776,18 @@ table{
     margin-top: 30rem;
     overflow: hidden;
     width: 550rem;
+    @include mq(mobile){
+      width: 100%;
+    }
     li{
       padding: 20rem 0;
       font-size: 20rem;
       font-weight: 400;
       color:#fff;
       border-bottom: 1rem solid rgba(255,255,255,0.3);
+      @include mq(mobile){
+        font-size: 16rem;
+      }
       .strong{
         padding-right: 50rem;
         display: inline-block;
@@ -714,6 +836,7 @@ table{
     span{
       margin-top: 30rem;
       display: inline-block;
+      line-height: 1.6em;
       font-size: 18rem;
       font-weight: normal;
       color:#707070;
@@ -723,6 +846,9 @@ table{
 .hwa_{
   height: 800rem;
   background-color: #747789;
+  @include mq(mobile){
+    height: 100%;
+  }
   .h2{
     text-align: center;
     font-size: 33rem;
@@ -733,9 +859,13 @@ table{
   .img_set{
     margin:50rem auto;
     display: flex;
-    width: 1250rem;
+    width: 1100rem;
+    @include mq(mobile){
+      max-width: 600rem;
+      width: 85%;
+    }
     .img_wrap{
-      margin-right: -60rem;
+      margin-right: -70rem;
       position: relative;
       flex-grow: 1;
       .txt_con{
@@ -747,11 +877,17 @@ table{
         .thin{
           font-size: 17rem;
           font-weight: 300;
+          @include mq(mobile){
+            display: none;
+          }
         }
         .medium{
           margin-top: 10rem;
           font-size: 25rem;
           font-weight: 400;
+          @include mq(mobile){
+            font-size: 10rem;
+          }
         }
       }
       img{
@@ -769,16 +905,17 @@ table{
     align-items: center;
     width: 1200rem;
     @include mq(mobile){
-      width: 100vw;
+      width: 100%;
+      height: 100%;
       flex-direction: column;
       row-gap: 30rem;
     }
     .img_wrap{
-      display: inline-block;
+      // display: inline-block;
       width: 300rem;
       height: 200rem;
       img{
-        display: inline-block;
+        // display: inline-block;
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -786,10 +923,9 @@ table{
       }
     }
     .txt_con{
-      flex-grow: 1;
       width: 800rem;
       @include mq(mobile){
-        width: 80%;
+        width: 90%;
       }
       .txt{
         line-height: 1.6em;
@@ -802,6 +938,9 @@ table{
   tr{
     margin-bottom: 20rem;
     display: flex;
+    @include mq(mobile){
+      width: 100%;
+    }
   }
   .square_th{
     display: flex;
@@ -814,10 +953,16 @@ table{
     color:#fff;
     background-color: #d37d35;
     border: 1rem solid #dfdfdf;
+    @include mq(mobile){
+      width: 30%;
+    }
   }
   .td2{
     position: relative;
     width: 40rem;
+    @include mq(mobile){
+      width: 5%;
+    }
     hr{
       position: absolute;
       top:50%;
@@ -839,6 +984,9 @@ table{
     padding:15rem;
     background-color: #f2f2f2;
     border: 1rem solid #dedede;
+    @include mq(mobile){
+      width: 65%;
+    }
   }
 }
 .cause{
@@ -846,36 +994,49 @@ table{
     margin:0 auto 50rem;
     width: 700rem;
     height: 400rem;
+    @include mq(mobile){
+      width: 100%;
+      height: 300rem;
+    }
     img{
       border-radius: 1%;
       border:1rem solid #ddd;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
   .txt1{
     padding: 10rem 0;
     display: flex;
     align-items: center;
-    column-gap: 20rem;
+    height: 100%;
     font-size: 18rem;
     font-weight: 400;
     color: #606060;
+    word-break: break-all;
     line-height: 1.4em;
     border-bottom: 1rem solid #eaeaea;
     &:last-child{
       border-bottom:none;
     }
+    .orange_num{
+      margin-right:20rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36rem;
+      height: 36rem;
+      font-size: 16rem;
+      color:#fff;
+      border-radius: 50%;
+      background-color: #ee8418;
+    }
+    p{
+      width: 90%;
+    }
   }
-  .orange_num{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 36rem;
-    height: 36rem;
-    font-size: 16rem;
-    color:#fff;
-    border-radius: 50%;
-    background-color: #ee8418;
-  }
+  
 }
 .scar_treat{
   .circle_wrap_title{
@@ -886,9 +1047,15 @@ table{
   .circle_wrap{
     padding:30rem 0 80rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    @include mq(mobile){
+      justify-content: center;
+      column-gap: 30rem;
+      row-gap: 30rem;
+    }
     .circle{
       display: flex;
       justify-content: center;
@@ -923,12 +1090,20 @@ table{
     margin-bottom: 10rem;
     display: flex;
     width: 100%;
+    height: 100%;
     &:last-child{
       margin:0;
     }
+    @include mq(mobile){
+      height: 280rem;
+    }
     .img_wrap{
       width: 25%;
-      height: 200rem;
+      height: 100%;
+      @include mq(mobile){
+        width: 35%;
+        height: 100%;
+      }
       img{
         width: 100%;
         height: 100%;
@@ -939,6 +1114,9 @@ table{
       padding: 30rem;
       width: calc(100% - 25%);
       background-color: #f2f2f2;
+      @include mq(mobile){
+        width: calc(100% - 35%);
+      }
       p{
         font-size: 22rem;
         font-weight: 600;
@@ -949,6 +1127,9 @@ table{
         display: inline-block;
         line-height: 1.6em;
         font-size: 17rem;
+        @include mq(mobile){
+          font-size: 15rem;
+        }
       }
     }
   }
@@ -958,13 +1139,21 @@ table{
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  @include mq(mobile){
+    flex-direction: column;
+    row-gap: 30rem;
+  }
   .marble{
+    @include mq(mobile){
+      order:2;
+    }
     .txt1{
       padding: 10rem 0;
       display: flex;
       align-items: center;
       column-gap: 20rem;
       width: 590rem;
+      height: 100%;
       font-size: 18rem;
       font-weight: 400;
       color: #606060;
@@ -973,36 +1162,51 @@ table{
       &:last-child{
         border-bottom:none;
       }
+      .orange_num{
+        margin-right: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36rem;
+        height: 36rem;
+        font-size: 16rem;
+        color:#fff;
+        border-radius: 20%;
+        background-color: #ee8418;
+      }
+      p{
+        width: 90%;
+      }
+      @include mq(mobile){
+        width: 100%;
+      }
     }
-    .orange_num{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 36rem;
-      height: 36rem;
-      font-size: 16rem;
-      color:#fff;
-      border-radius: 20%;
-      background-color: #ee8418;
-    }
+    
   }
   .img_wrap{
     width: 554rem;
     height: 370rem;
+    @include mq(mobile){
+      order:1;
+      width: 100%;
+    }
     img{
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 }
 .caution{
-  padding:50rem;
+  padding:50rem 0;
   display: flex;
   flex-direction: column;
   row-gap: 20rem;
+  @include mq(mobile){
+    padding:0
+  }
   li{
-    padding: 30rem 0;
+    padding: 30rem 20rem;
     text-align: center;
     width: 100%;
     font-size: 20rem;
@@ -1015,10 +1219,17 @@ table{
   .w-1200{
     display: flex;
     column-gap: 50rem;
+    @include mq(mobile){
+      flex-direction: column;
+      row-gap: 30rem;
+    }
   }
   .img_wrap{
     width: 300rem;
     height: 300rem;
+    @include mq(mobile){
+      width: 100%;
+    }
     img{
       width: 100%;
       height: 100%;
@@ -1100,6 +1311,11 @@ table{
   display: flex;
   column-gap: 30rem;
   justify-content: center;
+  @include mq(mobile){
+    margin: 0;
+    flex-wrap: wrap;
+    row-gap: 30rem;
+  }
   .big_marble{
     padding: 15rem;
     display: flex;
@@ -1136,6 +1352,9 @@ table{
   width: 100%;
   height: 600rem;
   background-color: antiquewhite;
+  @include mq(mobile){
+    height: 300rem;
+  }
 }
 .location_0104{
   .location{
@@ -1150,6 +1369,9 @@ table{
       height: 230rem;
       font-size: 18rem;
       border-bottom: 1rem solid #bcbcbc;
+      @include mq(mobile){
+        height: 100%;
+      }
       img{
         width: 95rem;
         height: 95rem;
@@ -1240,8 +1462,16 @@ table{
   width: 1000rem;
   height: 100%;
   @include mq(mobile){
-    width: 95%;
-    height: 100%;
+    width: 100%;
+    height: 400rem;
+  }
+  .swiper-slide{
+    width: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   .swiper-button-prev{
     color: #fff;
@@ -1255,7 +1485,9 @@ table{
   width: 1000rem;
   height: 150rem;
   @include mq(mobile){
-    width: 95%;
+    padding-top: 20rem;
+    width: 100%;
+    height: 80rem;
   }
   .swiper-slide{
     height: 100%;
