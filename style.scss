@@ -316,14 +316,28 @@ table{
     right:5%;
   }
 }
-.side_quick_menu{
+.quickmenu_mb{
   display: flex;
   flex-direction: row;
   width: 100%;
+  @include mq(tablet_pc){
+    display: none;
+  }
   .bg_gray{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 25%;
     height: 100rem;
     background-color: #404040;
+    border-right: 1rem solid #bdbdbd;
+    .txt{
+      color:#fff;
+      font-size: 18rem;
+      font-weight: 700;
+    }
   }
 }
 .banner_menu{
