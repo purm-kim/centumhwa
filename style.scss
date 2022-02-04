@@ -179,7 +179,7 @@ table{
     border-top: 1rem solid #bcbcbc;
     border-bottom: 1rem solid #bcbcbc;
     @include mq(mobile){
-      
+      display: none;
     }
     .depth1{
       margin: 0 auto;
