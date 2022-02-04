@@ -98,7 +98,7 @@ table {
 
 @media (max-width: 768px) {
   .w-1200 .section_title {
-    padding-left: 30rem;
+    text-align: center;
   }
 }
 
@@ -140,9 +140,14 @@ table {
 }
 
 #header .logo_title .call_btn {
-  display: none;
   width: 60rem;
   height: 60rem;
+}
+
+@media (min-width: 769px) and (max-width: 1999px) {
+  #header .logo_title .call_btn {
+    display: none;
+  }
 }
 
 #header .logo_title .call_btn img {
@@ -181,28 +186,19 @@ table {
 }
 
 #header .logo_title .mainmenu {
-  display: none;
   width: 60rem;
   height: 60rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1999px) {
   #header .logo_title .mainmenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: none;
   }
 }
 
 #header .logo_title .mainmenu img {
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -618,7 +614,7 @@ table {
   border-bottom: 1rem solid #bcbcbc;
 }
 
-.notice_location .w-1200 .notice .notice_title span {
+.notice_location .w-1200 .notice .notice_title .view_more {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -634,7 +630,7 @@ table {
   background-color: #f59518;
 }
 
-.notice_location .w-1200 .notice .notice_title span img {
+.notice_location .w-1200 .notice .notice_title .view_more img {
   width: 50%;
   height: 50%;
   -o-object-fit: contain;

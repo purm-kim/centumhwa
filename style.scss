@@ -95,7 +95,7 @@ table{
     font-size: 36rem;
     color: #d8762c;
     @include mq(mobile){
-      padding-left: 30rem;
+      text-align: center;
     }
   }
 }
@@ -121,13 +121,15 @@ table{
       border-bottom: 1rem solid #dfdfdf;
     }
     .call_btn{
-      display: none;
       width: 60rem;
       height: 60rem;
       @include mq(moblie){
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+      @include mq(tablet_pc){
+        display: none;
       }
       img{
         width: 90%;
@@ -152,21 +154,22 @@ table{
       }
     }
     .mainmenu{
-      display: none;
       width: 60rem;
       height: 60rem;
-      @include mq(mobile){
+      @include mq(moblie){
         display: flex;
         justify-content: center;
-        align-items:center;
+        align-items: center;
+      }
+      @include mq(tablet_pc){
+        display: none;
       }
       img{
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
         object-fit: contain;
       }
     }
-    
   }
   .gnb{
     margin: 0 auto;
@@ -455,7 +458,7 @@ table{
         font-size: 25rem;
         font-weight: 900;
         border-bottom: 1rem solid #bcbcbc;
-        span{
+        .view_more{
           display: flex;
           justify-content: center;
           align-items: center;
