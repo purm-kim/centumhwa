@@ -14,8 +14,8 @@
       @content;
     }
   }
-  @if $point == tablet {
-    @media (max-width: 1280px) {
+  @if $point == tablet_pc {
+    @media (min-width: 769px) and (max-width:1999px){
       @content;
     }
   }
@@ -80,6 +80,9 @@ table{
   padding: 100rem 0;
   width: 100%;
   min-height: 300rem;
+  @include mq(mobile){
+    padding: 0;
+  }
 }
 .w-1200{
   margin: 0 auto;
@@ -101,6 +104,7 @@ table{
 #header{
   width: 100%;
   height: 150rem;
+  // text-align: center;
   @include mq(mobile){
     height: 80rem;
   }
@@ -175,6 +179,7 @@ table{
       display: none;
     }
     .depth1{
+      margin: 0 auto;
       display: flex;
       align-items: flex-start;
       width: 1300rem;
@@ -266,11 +271,49 @@ table{
     
   }
 }
-.main_img_slide{
-  width: 100%;
-
+.pc_img_slide{
+  width: 100vw;
+  .swiper-slide{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .swiper-button-prev{
+    color:#fff;
+    left:3%;
+  }
+  .swiper-button-next{
+    color:#fff;
+    right:4%;
+  }
   @include mq(mobile){
-    width: 100vw;
+    display: none;
+  }
+}
+.mob_img_slide{
+  width: 100vw;
+  @include mq(tablet_pc){
+    display: none;
+  }
+  .swiper-slide{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .swiper-button-prev{
+    color:#fff;
+  }
+  .swiper-button-next{
+    color:#fff;
+    right:5%;
   }
 }
 .banner_menu{
@@ -326,8 +369,8 @@ table{
   background: url(/img/main/bg_fixed.jpg) fixed no-repeat center center / cover;
   @include mq(mobile){
     width: 100%;
-    height: 700rem;
-    background: url(/img/main/bg_fixed.jpg) no-repeat center center ;
+    height: 350rem;
+    background: url(/img/main/bg_fixed.jpg) no-repeat center center / cover;
   }
   .txt_con{
     position: absolute;
@@ -338,19 +381,27 @@ table{
     color:#fff;
     @include mq(mobile){
       width: 60%;
-      top:10%;
-      right:5%;
+      height: 220rem;
+      top:15%;
+      right:3%;
     }
     .h2{
       font-size: 42rem;
       font-weight: 700;
+      @include mq(mobile){
+        font-size: 30rem;
+      }
     }
     span{
-      margin-top:50rem;
+      margin-top:30rem;
       display: inline-block;
       font-size: 22rem;
       color:rgba(255, 255, 255, 0.6);
       line-height: 35rem;
+      @include mq(mobile){
+        font-size: 16rem;
+        line-height: 1.5em;
+      }
     }
   }
 }
@@ -370,6 +421,9 @@ table{
       flex:1;
       height: 100%;
       background-color: #fff;
+      @include mq(mobile){
+        display: none;
+      }
       .notice_title{
         padding-bottom: 10rem;
         display: flex;
@@ -415,6 +469,7 @@ table{
       display: flex;
       flex:1;
       height: 100%;
+      
       .txt_location{
         flex:1;
         padding: 20rem 12rem;
@@ -843,14 +898,32 @@ table{
   }
   .room_slide{
     margin: 50rem auto;
-    width: 1000rem;
-    height: 600rem;
-    background-color: #bdbdbd;
+    width: 950rem;
+    height: 450rem;
+    // background-color: #bdbdbd;
+    @include mq(mobile){
+      width: 100%;
+      height: 250rem;
+    }
+    .swiper-slide{
+      width: 100%;
+      height: 450rem;
+      @include mq(mobile){
+        height: 250rem;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
     .swiper-button-next{
       color:#fff;
+      right:3%;
     }
     .swiper-button-prev{
       color:#fff;
+      left:3%;
     }
   }
   .txt_con{
