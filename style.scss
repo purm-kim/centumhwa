@@ -316,6 +316,16 @@ table{
     right:5%;
   }
 }
+.side_quick_menu{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  .bg_gray{
+    width: 25%;
+    height: 100rem;
+    background-color: #404040;
+  }
+}
 .banner_menu{
   .flex_5{
     margin: 50rem auto;
