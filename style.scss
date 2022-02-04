@@ -111,10 +111,25 @@ table{
     width: 100%;
     height: 100rem;
     @include mq(mobile){
-      // justify-content: space-around;
+      justify-content: space-around;
       align-items: center;
       height: 80rem;
       border-bottom: 1rem solid #dfdfdf;
+    }
+    .call_btn{
+      display: none;
+      width: 60rem;
+      height: 60rem;
+      @include mq(moblie){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img{
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+      }
     }
     .img_wrap{
       display: flex;
@@ -147,21 +162,7 @@ table{
         object-fit: contain;
       }
     }
-    .icon_call{
-      // display: none;
-      width: 60rem;
-      height: 60rem;
-      @include mq(moblie){
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      img{
-        width: 90%;
-        height: 90%;
-        object-fit: contain;
-      }
-    }
+    
   }
   .gnb{
     margin: 0 auto;
@@ -273,39 +274,49 @@ table{
   }
 }
 .banner_menu{
-  ul{
-    margin: 01 auto;
+  .flex_5{
+    margin: 50rem auto;
     display: flex;
+    justify-content: center;
     @include mq(mobile){
+      margin:0 auto;
       flex-wrap: wrap;
-    }
-  }
-  a{
-    position: relative;
-    display: inline-block;
-    width: 240rem;
-    height: 250rem;
-    // @include mq(mobile){
-
-    // }
-    &:hover{
-      &::after{
-        position: absolute;
-        left:0;
-        top:0;
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-        z-index: 100;
-      }
-    }
-    
-    img{
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+    }
+    li{
+      width: 240rem;
+      height: 250rem;
+      @include mq(mobile){
+      }
+      &:nth-child(3){
+        @include mq(mobile){
+          display: none;
+        }
+      }
+      a{
+        position: relative;
+        display: inline-block;
+        width: 240rem;
+        height: 250rem;
+        &:hover{
+          &::after{
+            position: absolute;
+            left:0;
+            top:0;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 100;
+          }
+        }
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 }
@@ -313,6 +324,11 @@ table{
   position: relative;
   height: 660rem;
   background: url(/img/main/bg_fixed.jpg) fixed no-repeat center center / cover;
+  @include mq(mobile){
+    width: 100%;
+    height: 700rem;
+    background: url(/img/main/bg_fixed.jpg) no-repeat center center ;
+  }
   .txt_con{
     position: absolute;
     top:30%;
@@ -320,6 +336,11 @@ table{
     width: 600rem;
     height: 450rem;
     color:#fff;
+    @include mq(mobile){
+      width: 60%;
+      top:10%;
+      right:5%;
+    }
     .h2{
       font-size: 42rem;
       font-weight: 700;
@@ -339,9 +360,14 @@ table{
   .w-1200{
     display: flex;
     height: 350rem;
+    @include mq(mobile){
+      flex-direction: column;
+      row-gap: 20rem;
+      height: 100%;
+    }
     .notice{
       padding:30rem;
-      width: 50%;
+      flex:1;
       height: 100%;
       background-color: #fff;
       .notice_title{
@@ -387,7 +413,7 @@ table{
     }
     .location{
       display: flex;
-      width: 50%;
+      flex:1;
       height: 100%;
       .txt_location{
         flex:1;

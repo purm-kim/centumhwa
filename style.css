@@ -123,12 +123,27 @@ table {
 
 @media (max-width: 768px) {
   #header .logo_title {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     height: 80rem;
     border-bottom: 1rem solid #dfdfdf;
   }
+}
+
+#header .logo_title .call_btn {
+  display: none;
+  width: 60rem;
+  height: 60rem;
+}
+
+#header .logo_title .call_btn img {
+  width: 90%;
+  height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 #header .logo_title .img_wrap {
@@ -182,18 +197,6 @@ table {
 #header .logo_title .mainmenu img {
   width: 80%;
   height: 80%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-#header .logo_title .icon_call {
-  width: 60rem;
-  height: 60rem;
-}
-
-#header .logo_title .icon_call img {
-  width: 90%;
-  height: 90%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -346,28 +349,44 @@ table {
   }
 }
 
-.banner_menu ul {
-  margin: 01 auto;
+.banner_menu .flex_5 {
+  margin: 50rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 768px) {
-  .banner_menu ul {
+  .banner_menu .flex_5 {
+    margin: 0 auto;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 100%;
   }
 }
 
-.banner_menu a {
+.banner_menu .flex_5 li {
+  width: 240rem;
+  height: 250rem;
+}
+
+@media (max-width: 768px) {
+  .banner_menu .flex_5 li:nth-child(3) {
+    display: none;
+  }
+}
+
+.banner_menu .flex_5 li a {
   position: relative;
   display: inline-block;
   width: 240rem;
   height: 250rem;
 }
 
-.banner_menu a:hover::after {
+.banner_menu .flex_5 li a:hover::after {
   position: absolute;
   left: 0;
   top: 0;
@@ -379,7 +398,7 @@ table {
   z-index: 100;
 }
 
-.banner_menu a img {
+.banner_menu .flex_5 li a img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -392,6 +411,14 @@ table {
   background: url(/img/main/bg_fixed.jpg) fixed no-repeat center center/cover;
 }
 
+@media (max-width: 768px) {
+  .fixed_banner {
+    width: 100%;
+    height: 700rem;
+    background: url(/img/main/bg_fixed.jpg) no-repeat center center;
+  }
+}
+
 .fixed_banner .txt_con {
   position: absolute;
   top: 30%;
@@ -399,6 +426,14 @@ table {
   width: 600rem;
   height: 450rem;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .fixed_banner .txt_con {
+    width: 60%;
+    top: 10%;
+    right: 5%;
+  }
 }
 
 .fixed_banner .txt_con .h2 {
@@ -426,9 +461,22 @@ table {
   height: 350rem;
 }
 
+@media (max-width: 768px) {
+  .notice_location .w-1200 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20rem;
+    height: 100%;
+  }
+}
+
 .notice_location .w-1200 .notice {
   padding: 30rem;
-  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 100%;
   background-color: #fff;
 }
@@ -497,7 +545,9 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 100%;
 }
 
