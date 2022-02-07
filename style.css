@@ -1463,6 +1463,12 @@ table {
   letter-spacing: 7rem;
 }
 
+@media (max-width: 768px) {
+  .hwa_ .h2 {
+    font-size: 25rem;
+  }
+}
+
 .hwa_ .img_set {
   margin: 50rem auto;
   display: -webkit-box;
@@ -1479,16 +1485,22 @@ table {
 }
 
 .hwa_ .img_set .img_wrap {
-  margin-right: -70rem;
+  margin-right: -60rem;
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
+@media (max-width: 768px) {
+  .hwa_ .img_set .img_wrap {
+    margin-right: -15rem;
+  }
+}
+
 .hwa_ .img_set .img_wrap .txt_con {
   position: absolute;
-  left: 8%;
+  left: 6%;
   bottom: 5%;
   color: #fff;
   letter-spacing: -1rem;
@@ -1513,6 +1525,7 @@ table {
 
 @media (max-width: 768px) {
   .hwa_ .img_set .img_wrap .txt_con .medium {
+    max-width: 80rem;
     font-size: 10rem;
   }
 }

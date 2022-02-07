@@ -1044,6 +1044,9 @@ table{
     font-weight: 400;
     color:#fff;
     letter-spacing: 7rem;
+    @include mq(mobile){
+      font-size: 25rem;
+    }
   }
   .img_set{
     margin:50rem auto;
@@ -1054,12 +1057,15 @@ table{
       width: 85%;
     }
     .img_wrap{
-      margin-right: -70rem;
+      margin-right: -60rem;
       position: relative;
       flex-grow: 1;
+      @include mq(mobile){
+        margin-right: -15rem;
+      }
       .txt_con{
         position: absolute;
-        left:8%;
+        left:6%;
         bottom:5%;
         color:#fff;
         letter-spacing: -1rem;
@@ -1075,6 +1081,7 @@ table{
           font-size: 25rem;
           font-weight: 400;
           @include mq(mobile){
+            max-width: 80rem;
             font-size: 10rem;
           }
         }
