@@ -1,2 +1,7 @@
 PHP_FLAG register_globals ON
 PHP_VALUE mysql.default_charset UTF8
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php [QSA,L]
