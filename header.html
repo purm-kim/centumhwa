@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <link rel="stylesheet" href="/style.css">
   <title>헤더</title>
 </head>
@@ -22,46 +24,11 @@
       <img src="/img/common/logo_color.png" alt="">
     </a>
 
-    <a href="" class="mainmenu">
+    <div href="" class="mainmenu">
       <img src="/img/common/icon_mainmenu.png" alt="">
-    </a>
-
-    <!-- <div class="gnb_mob">
-      <ul>
-        <li>
-          <ul>
-            <li><a href="">의료진 소개</a></li>
-            <li><a href="">진료 및 입원안내</a></li>
-            <li><a href="">오시는 길</a></li>
-            <li><a href="">병원 둘러보기</a></li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            <li><a href="">급성화상</a></li>
-            <li><a href="">화상치료</a></li>
-            <li><a href="">소아화상</a></li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            <li><a href="">색소레이저</a></li>
-            <li><a href="">슈링크</a></li>
-            <li><a href="">피부재활 마사지</a></li>
-            <li><a href="">메디컬케어</a></li>
-            <li><a href="">보톡스</a></li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            <li><a href="">지방종/피지낭종</a></li>
-            <li><a href="">열상봉합</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div> -->
-
+    </div>
   </div>
+
   <div class="gnb">
     <ul class="depth1">
       <li class="depth1_01">
@@ -113,10 +80,61 @@
       </li>
     </ul>
   </div>
+
+  <div class="gnb_mob active">
+    <div class="close_btn">
+      <img src="/img/common/icon_close.png" alt="">
+    </div>
+    <div class="menu_bg"></div>
+    <ul class="depth1">
+      <li>병원소개
+        <ul class="depth2">
+          <li><a href="">의료진 소개</a></li>
+          <li><a href="">진료 및 입원안내</a></li>
+          <li><a href="">오시는 길</a></li>
+          <li><a href="">병원 둘러보기</a></li>
+        </ul>
+      </li>
+      <li>화상 클리닉
+        <ul class="depth2">
+          <li><a href="">급성화상</a></li>
+          <li><a href="">화상치료</a></li>
+          <li><a href="">소아화상</a></li>
+        </ul>
+      </li>
+      <li>피부 클리닉
+        <ul class="depth2">
+          <li><a href="">색소레이저</a></li>
+          <li><a href="">슈링크</a></li>
+          <li><a href="">피부재활 마사지</a></li>
+          <li><a href="">메디컬 케어</a></li>
+          <li><a href="">보톡스</a></li>
+        </ul>
+      </li>
+      <li>메디컬 클리닉
+        <ul class="depth2">
+          <li><a href="">지방종/피지낭종</a></li>
+          <li><a href="">열상봉합</a></li>
+        </ul>
+      </li>
+      <li>건강클리닉
+        <ul class="depth2">
+          <li><a href="">힐링수액</a></li>
+        </ul>
+      </li>
+      <li>커뮤니티
+        <ul class="depth2">
+          <li><a href="">공지사항</a></li>
+          <li><a href="">비급여안내</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
 </header>
 <!-- 로고 및 gnb 끝 -->
 
-<section class="sub_style">
+<!-- <section class="sub_style">
   <style>
     .sub_style{
       height:500rem;
@@ -124,7 +142,7 @@
     }
 
   </style>
-</section>
+</section> -->
 
 
 </body>
@@ -137,6 +155,33 @@
     $(this).children("ul").stop().slideToggle(300)
   });
 
-  toggleClass
+  $(function(){
+      $(".mainmenu").on('click' , function(){  
+      $('.gnb_mob').toggleClass('active');
+      $('.menu_bg').show();
+    });
+
+      $('.close_btn').on('click' , function(){
+      $('.gnb_mob').toggleClass('active');
+      $('.menu_bg').hide();
+	  });
+  });
+
+  // $('.gnb_mob .depth1 li').click(function(){
+  //     $('depth1').click(function(){
+  //       $('depth1').children.close();
+  //       $(this).children.css("display", 'block');
+  //     });
+  // })
+  
+  $('.gnb_mob li').click(function(){
+    $('.depth2').slideUp();
+    if ($(this).children('.depth2').is(':hidden')){
+        $(this).children('.depth2').slideDown();
+    }
+    else{
+    $(this).children('.depth2').slideUp();
+        }
+      });
 
 </script>
