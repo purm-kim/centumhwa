@@ -128,12 +128,3 @@
   <!-- 소아화상 예방법 끝 -->
 
 
-
-  <script>
-    
-    $(".gnb li").hover(function() {
-      $(this).children("ul").stop().slideToggle(300)
-    })
-  </script>
-</body>
-</html>
